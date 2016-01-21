@@ -96,10 +96,12 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func createFloatingNumber(sender: UIButton) {
+        if(!isFloat){
         operandStack.append(Double(displayValue))
         isFloat = true
         if(display.text! != ""){
         display.text! += "."
+        }
         }
     }
     
